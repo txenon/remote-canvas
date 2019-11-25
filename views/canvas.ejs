@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+<title>P2P Canvas</title>
+<link rel="stylesheet" href="/font-awesome-4.6.3/css/font-awesome.min.css">
+<link rel="stylesheet" href="/master.css">
+<link rel="stylesheet" href="/modal.css">
+<style>
+  /*
+  #myBtn i{
+    transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+  }
+
+  #myBtn i:hover {
+    transform: rotate(720deg);
+    -webkit-transform: rotate(720deg);
+  }
+  */
+</style>
+</head>
+<body style="margin: 0;">
+
+<!-- Trigger/Open The Modal -->
+<div id="myBtn" style="z-index: 10;"><i class="fa fa-cog" aria-hidden="true"></i></div>
+<div id="userCounter" style="z-index: 10;">
+  <span id="msgBox" style="margin-right: 2rem;"></span>
+  Online: <span id="userCountVal"></span>
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal" style="z-index: 11;">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">×</span>
+      <a href="/"><span id="home"><i class="fa fa-home" aria-hidden="true"></i></span></a>
+      <h2>Settings</h2>
+    </div>
+    <div class="modal-body">
+      <div>
+        <div id="colors">
+        </div>
+        <div id="eraser">
+        </div>
+      </div>
+
+      <div>
+        <span id="undo"><i class="fa fa-undo" aria-hidden="true"></i></span>
+        <span id="clear"><i class="fa fa-trash" aria-hidden="true"></i></span>
+        <!--
+        <span id="save"><i class="fa fa-floppy-o" aria-hidden="true"></i></span>
+        -->
+      </div>
+
+      <div style="position: relative;">
+        <span id="fonts"><i class="fa fa-paint-brush" aria-hidden="true"></i></span>
+
+        <span id="rad">
+          Radius:
+          <span id="decrad"><i class="fa fa-minus" aria-hidden="true"></i></span>
+          <span id="radval"></span>
+          <span id="incrad"><i class="fa fa-plus" aria-hidden="true"></i></span>
+        </span>
+
+        <span id="alpha">
+          Alpha:
+          <span id="decalpha"><i class="fa fa-minus" aria-hidden="true"></i></span>
+          <span id="alphaval"></span>
+          <span id="incalpha"><i class="fa fa-plus" aria-hidden="true"></i></span>
+        </span>
+      </div>
+    </div>
+    <!--
+    <div class="modal-footer">
+      <h3>Modal Footer</h3>
+    </div>
+    -->
+  </div>
+
+</div>
+
+  <div id="canvasWrapper" style="position: relative; overflow: hidden;">
+    <canvas id="canvas" style="position: absolute; left: 0; top: 0; z-index: 1;">
+      Sorry, your browser is not supported.
+    </canvas>
+    <canvas id="canvas2" style="position: absolute; left: 0; top: 0; z-index: 9;">
+      Sorry, your browser is not supported.
+    </canvas>
+    <canvas id="canvas4" style="position: absolute; left: 0; top: 0; z-index: 0;">
+      Sorry, your browser is not supported.
+    </canvas>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+
+  <script src="/main.js"></script>
+  <script src="/config.js"></script>
+  <script src="/modal.js"></script>
+</body>
+</html>

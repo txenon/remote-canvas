@@ -1,0 +1,100 @@
+*{
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  font-size: 1.6rem;
+}
+
+#myBtn{
+  position: fixed;
+  top: 1rem;
+  left: 1rem;
+  opacity: 0.8;
+  font-size: 2.5rem;
+}
+
+#userCounter{
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  opacity: 0.8;
+}
+
+#colors{
+  float: right;
+}
+
+.swatch{
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  margin-left: 1rem;
+}
+
+.swatch.active{
+  border: 2px solid white;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#eraser{
+  float: right;
+  margin-right: 2rem;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 1.5rem;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 2px 2px rgba(0, 0, 0, 0.5);
+  background-color: #ffffff;
+}
+
+#eraser.eraserOn{
+  border: 2px solid white;
+  box-shadow: inset 0px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+#clear, #save, #undo {
+  margin: 0 1rem;
+  padding: 0.8rem;
+}
+
+#clear:hover, #save:hover, #undo:hover {
+  color: #666666;
+}
+
+#decrad, #incrad, #decalpha, #incalpha {
+  padding: 0.4rem;
+}
+
+#decrad:hover, #incrad:hover, #decalpha:hover, #incalpha:hover {
+  color: #666666;
+}
+
+#fonts {
+  margin: 0 1rem;
+  padding: 0.8rem;
+}
+
+#rad, #alpha {
+  margint: 0 1rem;
+  padding: 0.8rem;
+}
+
+#myModal a{
+  color: #000000;
+}
+
+.modal-body {
+  font-size: 2rem;
+}
+
+img.thumb:hover {
+  opacity: 0.5;
+}
